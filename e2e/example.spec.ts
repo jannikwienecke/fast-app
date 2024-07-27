@@ -13,5 +13,5 @@ test("has title", async ({ page }) => {
 test("has counter", async ({ page }) => {
   await page.goto("/");
 
-  await expect(page.getByText(/You clicked 11 times/)).toBeVisible();
+  await expect(page.getByText(/You clicked 0 times/)).toBeVisible();
 });
