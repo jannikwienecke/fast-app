@@ -37,6 +37,9 @@ jobs:
       - name: Check formatting with Prettier
         run: pnpm prettier:format
 
+      - name: Check formatting with ESLint
+        run: pnpm lint
+
       - name: Install Playwright Browsers
         run: pnpm exec playwright install --with-deps
 
