@@ -1,6 +1,8 @@
 import { Client } from "./client"
 import { prisma } from "./db"
 
+export const dynamic = "force-dynamic"
+
 export default async function Home() {
   const user = await prisma.user.findMany()
 
