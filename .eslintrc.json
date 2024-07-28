@@ -1,10 +1,15 @@
 {
-  "ignorePatterns": [".eslintrc.json"],
-  "plugins": ["vitest"],
+  "ignorePatterns": [
+    ".eslintrc.json"
+  ],
+  "plugins": [
+    "vitest"
+  ],
   "extends": [
     "next/core-web-vitals",
     "eslint:recommended",
-    "plugin:vitest/recommended"
+    "plugin:vitest/recommended",
+    "plugin:storybook/recommended"
   ],
   "globals": {
     "React": "readonly"
