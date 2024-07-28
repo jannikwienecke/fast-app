@@ -14,10 +14,6 @@ model Post {
   content        String?
   published      Boolean  @default(false)
   authorId       Int
-  xata_updatedat DateTime @default(now()) @db.Timestamptz(6)
-  xata_id        String   @unique(map: "Post__pgroll_new_xata_id_key") @default(dbgenerated("('rec_'::text || (xata_private.xid())::text)"))
-  xata_version   Int      @default(0)
-  xata_createdat DateTime @default(now()) @db.Timestamptz(6)
   author         User     @relation(fields: [authorId], references: [id])
 }
 
@@ -25,10 +21,6 @@ model Profile {
   id             Int      @id @default(autoincrement())
   bio            String?
   userId         Int      @unique
-  xata_id        String   @unique(map: "Profile__pgroll_new_xata_id_key") @default(dbgenerated("('rec_'::text || (xata_private.xid())::text)"))
-  xata_version   Int      @default(0)
-  xata_createdat DateTime @default(now()) @db.Timestamptz(6)
-  xata_updatedat DateTime @default(now()) @db.Timestamptz(6)
   user           User     @relation(fields: [userId], references: [id])
 }
 
@@ -36,19 +28,12 @@ model User {
   id             Int      @id @default(autoincrement())
   email          String   @unique
   name           String?
-  xata_id        String   @unique(map: "User__pgroll_new_xata_id_key") @default(dbgenerated("('rec_'::text || (xata_private.xid())::text)"))
-  xata_version   Int      @default(0)
-  xata_createdat DateTime @default(now()) @db.Timestamptz(6)
-  xata_updatedat DateTime @default(now()) @db.Timestamptz(6)
   posts          Post[]
   profile        Profile?
 }
 
 /// This table contains check constraints and requires additional setup for migrations. Visit https://pris.ly/d/check-constraints for more info.
 model Count {
-  xata_id        String   @unique(map: "_pgroll_new_Count_xata_id_key") @default(dbgenerated("('rec_'::text || (xata_private.xid())::text)"))
-  xata_version   Int      @default(0)
-  xata_createdat DateTime @default(now()) @db.Timestamptz(6)
-  xata_updatedat DateTime @default(now()) @db.Timestamptz(6)
+  id             Int      @id @default(autoincrement())
   value          BigInt?
 }

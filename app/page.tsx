@@ -7,7 +7,10 @@ export default async function Home() {
 
   return (
     <main className="min-h-screen grid place-items-center">
-      <Client />
+      <div>
+        <div>First User: {user?.name ?? "No user"}</div>
+        <Client />
+      </div>
     </main>
   )
 }
