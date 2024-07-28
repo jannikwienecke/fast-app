@@ -1,17 +1,17 @@
-"use client";
+"use client"
 
-import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Slider } from "@/components/ui/slider";
-import { cn } from "@/lib/utils";
-import React from "react";
+import { Button } from "@/components/ui/button"
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
+import { Slider } from "@/components/ui/slider"
+import { cn } from "@/lib/utils"
+import React from "react"
 
 export const Client = () => {
-  const [count, setCount] = React.useState(0);
+  const [count, setCount] = React.useState(0)
 
   React.useEffect(() => {
-    console.log("Client rendered", { count });
-  });
+    console.log("Client rendered", { count })
+  })
 
   return (
     <div className="flex flex-col space-y-2 justify-center items-center">
@@ -40,5 +40,5 @@ export const Client = () => {
         </CardContent>
       </Card>
     </div>
-  );
-};
+  )
+}
