@@ -4,12 +4,12 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Slider } from "@/components/ui/slider"
 import { cn } from "@/lib/utils"
-import React from "react"
+import React, { useEffect } from "react"
 
 export const Client = () => {
   const [count, setCount] = React.useState(0)
 
-  React.useEffect(() => {
+  useEffect(() => {
     console.log("Client rendered", { count })
   })
 

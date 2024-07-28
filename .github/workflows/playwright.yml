@@ -40,6 +40,9 @@ jobs:
       - name: Check formatting with ESLint
         run: pnpm lint
 
+      - name: Run Vitest
+        run: pnpm test
+
       - name: Install Playwright Browsers
         run: pnpm exec playwright install --with-deps
 
