@@ -1,2 +1,4 @@
 # all files inside components folder
 components/*
+
+**/*.test.ts

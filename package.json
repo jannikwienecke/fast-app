@@ -77,7 +77,7 @@
     "eslint": "^8",
     "eslint-config-next": "15.0.0-rc.0",
     "eslint-plugin-react": "7.35.0",
-    "eslint-plugin-vitest": "^0.5.4",
+    "eslint-plugin-vitest": "^0.4.1",
     "postcss": "^8",
     "prettier": "3.3.3",
     "prisma": "^5.17.0",
